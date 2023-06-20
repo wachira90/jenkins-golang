@@ -11,13 +11,13 @@ pipeline {
         stage('test environment') {
             steps {
                 sh 'go version'
+                sh 'pwd'
             }
         }
         
         stage('build golang') {
             steps {
-                sh 'go version'
-                sh 'pwd'
+                sh 'go build main.go'
             }
         }
         
