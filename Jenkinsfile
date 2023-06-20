@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'go version'
                 sh 'pwd'
+                sh 'printenv'
             }
         }
         
