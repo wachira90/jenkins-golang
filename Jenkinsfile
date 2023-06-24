@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'go version'
                 sh 'pwd'
-                sh 'mkdir .cache'
+                sh 'mkdir -p .cache'
 //                sh 'printenv'
             }
         }
