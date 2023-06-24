@@ -28,6 +28,7 @@ pipeline {
         stage('SUCCESS') {
             steps {
                 sh 'echo success'
+                sh 'exit'
             }
         }        
     }
