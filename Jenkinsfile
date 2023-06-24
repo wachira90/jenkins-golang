@@ -20,7 +20,7 @@ pipeline {
             steps {
 //                 golang-version THIS UP PARENT FOLDER
                 sh 'go mod init golang-version'
-                SH 'go mod tidy'
+                sh 'go mod tidy'
                 sh 'go build'
             }
         }
