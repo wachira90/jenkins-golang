@@ -8,7 +8,7 @@ pipeline {
     }
     stages {
         
-        stage('test environment') {
+        stage('CHECK VERSION') {
             steps {
                 sh 'go version'
                 sh 'pwd'
@@ -16,13 +16,13 @@ pipeline {
             }
         }
         
-        stage('build golang') {
+        stage('BUILD GOLANG') {
             steps {
                 sh 'go build main.go'
             }
         }
         
-        stage('success') {
+        stage('SUCCESS') {
             steps {
                 sh 'echo success'
             }
