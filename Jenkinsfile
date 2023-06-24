@@ -27,7 +27,8 @@ pipeline {
         
         stage('SUCCESS') {
             steps {
-                sh 'echo success'
+//                sh 'echo success'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 sh 'exit'
             }
         }        
