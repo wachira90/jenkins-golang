@@ -29,6 +29,7 @@ pipeline {
             steps {
 //                sh 'echo success'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh 'chmod 0775 golang-version'
                 sh 'exit'
             }
         }        
