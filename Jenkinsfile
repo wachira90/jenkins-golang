@@ -18,7 +18,9 @@ pipeline {
         
         stage('BUILD GOLANG') {
             steps {
-                sh 'go build main.go'
+//                 golang-version THIS UP PARENT FOLDER
+                sh 'go mod init golang-version'
+                sh 'go build'
             }
         }
         
