@@ -2,7 +2,7 @@ pipeline {
     agent { 
         docker { 
             image 'golang:1.19.1-alpine' 
-            args '--network=host'
+            args '--network=host -v $WORKSPACE/:/.cache'
         } 
         
     }
