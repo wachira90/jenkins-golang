@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'go version'
                 sh 'pwd'
+                sh 'which go'
 //                sh 'mkdir -p .cache'
 //                sh 'printenv'
             }
@@ -20,7 +21,7 @@ pipeline {
         stage('BUILD GOLANG') {
             steps {
 //                 golang-version THIS UP PARENT FOLDER
-                sh 'go mod init golang-version'
+                sh 'go mod init jenkins-golang'
                 sh 'go mod tidy'
                 sh 'go build'
             }
@@ -30,7 +31,7 @@ pipeline {
             steps {
 //                sh 'echo success'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh 'chmod 0775 golang-version'
+                sh 'chmod 0775 jenkins-golang'
                 sh 'exit'
             }
         }        
