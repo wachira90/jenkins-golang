@@ -27,6 +27,7 @@ pipeline {
 //                sh 'go mod init jenkins-golang'
                 sh 'go mod tidy'
 //                sh 'export APP_BUILD_NAME=app-v${BUILD_NUMBER}'
+//                sh 'go build'
                 sh 'go build -o app-v${BUILD_NUMBER}'
             }
         }
@@ -35,7 +36,7 @@ pipeline {
             steps {
 //                sh 'echo success'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh 'chmod 0775 jenkins-golang'
+                sh 'chmod 0775 app-v${BUILD_NUMBER}'
                 sh 'exit'
             }
         }        
