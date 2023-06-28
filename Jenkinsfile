@@ -1,7 +1,8 @@
 pipeline {
     agent { 
         docker { 
-            image 'golang:1.19.1-alpine' 
+//            image 'golang:1.19.1-alpine'
+            image 'golang:1.20.5-alpine3.18'
             args '-v ${WORKSPACE}/:/.cache --network=host'
         } 
         
