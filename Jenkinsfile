@@ -26,8 +26,8 @@ pipeline {
               sh 'go mod init  $(basename "$(pwd)")'                
 //                sh 'go mod init jenkins-golang'
                 sh 'go mod tidy'
-                sh 'export APP_BUILD_NAME=app-v${BUILD_NUMBER}'
-                sh 'go build -o ${env.APP_BUILD_NAME}'
+//                sh 'export APP_BUILD_NAME=app-v${BUILD_NUMBER}'
+                sh 'go build -o app-v${BUILD_NUMBER}'
             }
         }
         
