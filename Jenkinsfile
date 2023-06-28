@@ -15,7 +15,6 @@ pipeline {
                 sh 'pwd'
                 sh 'which go'
                 sh 'rm -f go.*'
-//                sh 'mkdir -p .cache'
 //                sh 'printenv'
             }
         }
