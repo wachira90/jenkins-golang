@@ -23,7 +23,8 @@ pipeline {
         stage('BUILD GOLANG') {
             steps {
 //                 golang-version THIS UP PARENT FOLDER
-                sh 'go mod init jenkins-golang'
+              sh 'go mod init  $(basename "$(pwd)")'                
+//                sh 'go mod init jenkins-golang'
                 sh 'go mod tidy'
                 sh 'go build'
             }
